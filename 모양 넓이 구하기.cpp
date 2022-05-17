@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 
-// ÁÖ¼®À¸·Î Á¦½ÃµÈ Á¶°Ç Ç¥±â
+// ì£¼ì„ìœ¼ë¡œ ì œì‹œëœ ì¡°ê±´ í‘œê¸°
 
 class Shape
 {
 private:
 	string NAME;
-	int A;  //°¡·Î1
-	int B;  //¼¼·Î
-	int C;  //°¡·Î2
+	int A;  //ê°€ë¡œ1
+	int B;  //ì„¸ë¡œ
+	int C;  //ê°€ë¡œ2
 
 public:
 	Shape(int x=0, int y=0, int z=0)
@@ -19,50 +19,50 @@ public:
 		C = z;
 	}
 
-	int getA(int x) //1. getA() : A°ª ¸®ÅÏ
+	int getA(int x) //1. getA() : Aê°’ ë¦¬í„´
 	{  
 		A = x;
 		return A;
 	}
-	int getB(int y) //2. getB() : B°ª ¸®ÅÏ
+	int getB(int y) //2. getB() : Bê°’ ë¦¬í„´
 	{  
 		B = y;
 		return B;
 	}
-	int getC(int z) //3. getC() : C°ª ¸®ÅÏ
+	int getC(int z) //3. getC() : Cê°’ ë¦¬í„´
 	{  
 		C = z;
 		return C;
 	}
 
-	double AreaOval() //4. AreaOval() : Å¸¿ø ³ĞÀÌ Ãâ·ÂÇØÁÖ´Â ÇÔ¼ö
+	double AreaOval() //4. AreaOval() : íƒ€ì› ë„“ì´ ì¶œë ¥í•´ì£¼ëŠ” í•¨ìˆ˜
 	{
-		double AreaOval = A * B * 3.14;  //Å¸¿ø ³ĞÀÌ = °¡·Î x ¼¼·Î x ¥ğ
-		cout << "Å¸¿øÀÇ ³ĞÀÌ´Â" << AreaOval << "ÀÌ´Ù" << endl;
+		double AreaOval = A * B * 3.14;  //íƒ€ì› ë„“ì´ = ê°€ë¡œ x ì„¸ë¡œ x Ï€
+		cout << "íƒ€ì›ì˜ ë„“ì´ëŠ”" << AreaOval << "ì´ë‹¤" << endl;
 		NAME = "CircleA";
 		return 0;
 	}
-	int AreaRect()  //5. AreaRect() : Á÷»ç°¢Çü ³ĞÀÌ Ãâ·ÂÇØÁÖ´Â ÇÔ¼ö
+	int AreaRect()  //5. AreaRect() : ì§ì‚¬ê°í˜• ë„“ì´ ì¶œë ¥í•´ì£¼ëŠ” í•¨ìˆ˜
 	{
 		int AreaRect = A * B;  
-		cout << "Á÷»ç°¢ÇüÀÇ ³ĞÀÌ´Â" << AreaRect << "ÀÌ´Ù" << endl;
+		cout << "ì§ì‚¬ê°í˜•ì˜ ë„“ì´ëŠ”" << AreaRect << "ì´ë‹¤" << endl;
 		NAME = "Rectangular";
 		return 0;
 	}
-	int AreaLadder()  //6. AreaLadder() : »ç´Ù¸®²Ã ³ĞÀÌ Ãâ·ÂÇØÁÖ´Â ÇÔ¼ö
+	int AreaLadder()  //6. AreaLadder() : ì‚¬ë‹¤ë¦¬ê¼´ ë„“ì´ ì¶œë ¥í•´ì£¼ëŠ” í•¨ìˆ˜
 	{
 		int AreaLadder = (A + C) * B / 2;  
-		cout << "»ç´Ù¸®²ÃÀÇ ³ĞÀÌ´Â" << AreaLadder << "ÀÌ´Ù" << endl;
+		cout << "ì‚¬ë‹¤ë¦¬ê¼´ì˜ ë„“ì´ëŠ”" << AreaLadder << "ì´ë‹¤" << endl;
 		NAME = "Ladder";
 		return 0;
 	}
 
-	void setTwo(int x, int y)  //7. setTwo() : Å¸¿øÀÇ A,B³ª Á÷»ç°¢ÇüÀÇ A, B¸¦ ¼³Á¤ÇØÁÖ´Â ÇÔ¼ö
+	void setTwo(int x, int y)  //7. setTwo() : íƒ€ì›ì˜ A,Bë‚˜ ì§ì‚¬ê°í˜•ì˜ A, Bë¥¼ ì„¤ì •í•´ì£¼ëŠ” í•¨ìˆ˜
 	{
 		A = x;
 		B = y;
 	}
-	void setThree(int x, int y, int z)  //8. setThree() : »ç´Ù¸®²ÃÀÇ A, B, C ±æÀÌ¸¦ ¼³Á¤ÇØÁÖ´Â ÇÔ¼ö
+	void setThree(int x, int y, int z)  //8. setThree() : ì‚¬ë‹¤ë¦¬ê¼´ì˜ A, B, C ê¸¸ì´ë¥¼ ì„¤ì •í•´ì£¼ëŠ” í•¨ìˆ˜
 	{
 		A = x;
 		B = y;
@@ -74,24 +74,24 @@ public:
 
 	~Shape()
 	{
-		cout << "Shape ¼Ò¸ê " << NAME << "Å¬·¡½º" << endl;
+		cout << "Shape ì†Œë©¸ " << NAME << "í´ë˜ìŠ¤" << endl;
 	}
-}
+};
 
 
 
 
 int main()
 {
-	Shape a; //Å¸¿ø
-	a.setTwo(5, 1); // Á¶°Ç ¼Ó Å¸¿øÀÇ ÀåÃàÀÌ xÃàÀÌ¹Ç·Î (1,5)°¡ ¾Æ´Ñ (5,1)
+	Shape a; //íƒ€ì›
+	a.setTwo(5, 1); // ì¡°ê±´ ì† íƒ€ì›ì˜ ì¥ì¶•ì´ xì¶•ì´ë¯€ë¡œ (1,5)ê°€ ì•„ë‹Œ (5,1)
 	a.AreaOval();
 
-	Shape b(10, 20); //Á÷»ç°¢Çü
+	Shape b(10, 20); //ì§ì‚¬ê°í˜•
 	b.setTwo(10, 20);
 	b.AreaRect();
 
-	Shape c(3, 7, 4); //»ç´Ù¸®²Ã
+	Shape c(3, 7, 4); //ì‚¬ë‹¤ë¦¬ê¼´
 	c.setThree(3, 7, 4);
 	c.AreaLadder();
 	c.setThree(5, 10, 6);
