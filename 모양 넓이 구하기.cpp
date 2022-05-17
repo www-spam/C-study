@@ -51,7 +51,7 @@ public:
 	}
 	int AreaLadder()  //6. AreaLadder() : 사다리꼴 넓이 출력해주는 함수
 	{
-		int AreaLadder = (A + B) * C / 2;  
+		int AreaLadder = (A + C) * B / 2;  
 		cout << "사다리꼴의 넓이는" << AreaLadder << "이다" << endl;
 		NAME = "Ladder";
 		return 0;
