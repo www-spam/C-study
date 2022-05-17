@@ -76,7 +76,7 @@ public:
 	{
 		cout << "Shape ¼Ò¸ê " << NAME << "Å¬·¡½º" << endl;
 	}
-};
+}
 
 
 
