@@ -3,63 +3,63 @@ using namespace std;
 
 
 
-//ÁÖ¼®À¸·Î Á¶°Ç ³ª¿­
+//ì£¼ì„ìœ¼ë¡œ ì¡°ê±´ ë‚˜ì—´
 
 
-string getName(string Name) // 1. getName() : Name °ª ¸®ÅÏ
+string getName(string Name) // 1. getName() : Name ê°’ ë¦¬í„´
 {
 	return Name;
 }
-string getId(string Id) //2. getId() : Id°ª ¸®ÅÏ
+string getId(string Id) //2. getId() : Idê°’ ë¦¬í„´
 {
 	return Id;
 }
-int getPassword(int Password) //3. getPassword : Password °ª ¸®ÅÏ
+int getPassword(int Password) //3. getPassword : Password ê°’ ë¦¬í„´
 {
 	return Password;
 }
 
-string setName() //4-1. setName() È¸¿ø°¡ÀÔÇÒ ¶§ ÀÌ¸§ ÀÔ·Â¹Ş±â
+string setName() //4-1. setName() íšŒì›ê°€ì…í•  ë•Œ ì´ë¦„ ì…ë ¥ë°›ê¸°
 {
 	string Name;
-	cout << "ÀÌ¸§ : ";
+	cout << "ì´ë¦„ : ";
 	cin >> Name;
 	return Name;
 }
-string setId() //4-2. setId() È¸¿ø°¡ÀÔÇÒ ¶§ ¾ÆÀÌµğ ÀÔ·Â¹Ş±â
+string setId() //4-2. setId() íšŒì›ê°€ì…í•  ë•Œ ì•„ì´ë”” ì…ë ¥ë°›ê¸°
 {
 	string Id;
-	cout << "¾ÆÀÌµğ : ";
+	cout << "ì•„ì´ë”” : ";
 	cin >> Id;
 	return Id;
 }
-int setPassword() //4-3. setPassword() È¸¿ø°¡ÀÔÇÒ ¶§ ÀÌ¸§ ÀÔ·Â¹Ş±â
+int setPassword() //4-3. setPassword() íšŒì›ê°€ì…í•  ë•Œ ë¹„ë°€ë²ˆí˜¸ ì…ë ¥ë°›ê¸°
 {
 	int Password;
-	cout << "ºñ¹Ğ¹øÈ£ : ";
+	cout << "ë¹„ë°€ë²ˆí˜¸ : ";
 	cin >> Password;
 	return Password;
 }
 
-class Member  //5. Å¬·¡½º Member : ·Î±×ÀÎ ±¸Çö ÄÚµå
+class Member  //5. í´ë˜ìŠ¤ Member : ë¡œê·¸ì¸ êµ¬í˜„ ì½”ë“œ
 {
 	void login(string Name, string Id, int Password)
 	{
-		cout << "¾ÆÀÌµğ : ";
+		cout << "ì•„ì´ë”” : ";
 		string id;
 		cin >> id;
 
-		cout << "ºñ¹Ğ¹øÈ£ : ";
+		cout << "ë¹„ë°€ë²ˆí˜¸ : ";
 		int pw;
 		cin >> pw;
 
 		if (Id == id || Password == pw)
 		{
-			cout << "=== ·Î±×ÀÎ ¼º°ø ===" << endl << endl;
-			cout << Name << "´Ô È¯¿µÇÕ´Ï´Ù" << endl << endl;
+			cout << "=== ë¡œê·¸ì¸ ì„±ê³µ ===" << endl << endl;
+			cout << Name << "ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤" << endl << endl;
 		}
 		else
-			cout << "¾ÆÀÌµğ È¤Àº ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù" << endl << endl;
+			cout << "ì•„ì´ë”” í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤" << endl << endl;
 	}
 
 };
