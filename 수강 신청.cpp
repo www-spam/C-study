@@ -55,11 +55,11 @@ class Member  //5. 클래스 Member : 로그인 구현 코드
 
 		if (Id == id || Password == pw)
 		{
-			cout << "=== 로그인 성공 ===" << endl << endl;
-			cout << Name << "님 환영합니다" << endl << endl;
+			cout << "=== 로그인 성공 ===" << endl;
+			cout << Name << "님 환영합니다" << endl;
 		}
 		else
-			cout << "아이디 혹은 비밀번호가 틀렸습니다" << endl << endl;
+			cout << "아이디 혹은 비밀번호가 틀렸습니다" << endl;
 	}
 
 };
