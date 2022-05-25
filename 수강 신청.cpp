@@ -2,64 +2,64 @@
 #include <string>
 using namespace std;
 
-//ÁÖ¼®À¸·Î Á¶°Ç ³ª¿­
+//ì£¼ì„ìœ¼ë¡œ ì¡°ê±´ ë‚˜ì—´
 
-class Member //5. Å¬·¡½º Member : ·Î±×ÀÎ ±¸Çö ÄÚµå
+class Member //5. í´ë˜ìŠ¤ Member : ë¡œê·¸ì¸ êµ¬í˜„ ì½”ë“œ
 {
 	string Name, Id;
 	int Password;
 public:
-	string getName() //1. getName() : Name °ª ¸®ÅÏ
+	string getName() //1. getName() : Name ê°’ ë¦¬í„´
 	{
 		return Name;
 	}
-	string getId() //2. getId() : Id°ª ¸®ÅÏ
+	string getId() //2. getId() : Idê°’ ë¦¬í„´
 	{
 		return Id;
 	}
-	int getPassword() //3. getPassword : Password °ª ¸®ÅÏ
+	int getPassword() //3. getPassword : Password ê°’ ë¦¬í„´
 	{
 		return Password;
 	}
 
-	string setName() //4-1. setName() È¸¿ø°¡ÀÔÇÒ ¶§ ÀÌ¸§ ÀÔ·Â¹Ş±â
+	string setName() //4-1. setName() íšŒì›ê°€ì…í•  ë•Œ ì´ë¦„ ì…ë ¥ë°›ê¸°
 	{
 		string Name;
-		cout << "ÀÌ¸§ : ";
+		cout << "ì´ë¦„ : ";
 		cin >> Name;
 		return Name;
 	}
-	string setId() //4-2. setId() È¸¿ø°¡ÀÔÇÒ ¶§ ¾ÆÀÌµğ ÀÔ·Â¹Ş±â
+	string setId() //4-2. setId() íšŒì›ê°€ì…í•  ë•Œ ì•„ì´ë”” ì…ë ¥ë°›ê¸°
 	{
 		string Id;
-		cout << "¾ÆÀÌµğ : ";
+		cout << "ì•„ì´ë”” : ";
 		cin >> Id;
 		return Id;
 	}
-	int setPassword() //4-3. setPassword() È¸¿ø°¡ÀÔÇÒ ¶§ ÀÌ¸§ ÀÔ·Â¹Ş±â
+	int setPassword() //4-3. setPassword() íšŒì›ê°€ì…í•  ë•Œ ì´ë¦„ ì…ë ¥ë°›ê¸°
 	{
 		int Password;
-		cout << "ºñ¹Ğ¹øÈ£ : ";
+		cout << "ë¹„ë°€ë²ˆí˜¸ : ";
 		cin >> Password;
 		return Password;
 	}
 	void login(string Name, string ID, int Password) 
 	{  
-		cout << "¾ÆÀÌµğ: ";
+		cout << "ì•„ì´ë””: ";
 		string id;
 		cin >> id;
 
-		cout << "ºñ¹Ğ¹øÈ£: ";
-		int pw;
-		cin >> pw;
+		cout << "ë¹„ë°€ë²ˆí˜¸: ";
+		int password;
+		cin >> password;
 
-		if (ID == id && Password == pw)
+		if (ID == id && Password == password)
 		{
-			cout << "=== ·Î±×ÀÎ ¼º°ø ===" << endl;
-			cout << Name << "´Ô È¯¿µÇÕ´Ï´Ù" << endl;
+			cout << "=== ë¡œê·¸ì¸ ì„±ê³µ ===" << endl;
+			cout << Name << "ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤" << endl;
 		}
 		else
-			cout << "¾ÆÀÌµğ È¤Àº ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù" << endl;
+			cout << "ì•„ì´ë”” í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤" << endl;
 	}
 };
 
@@ -76,10 +76,10 @@ int main()
 
 	while (1)
 	{
-		cout << "------------------ ¼­¿ï¿©ÀÚ´ëÇĞ±³ Á¾ÇÕÁ¤º¸½Ã½ºÅÛ ------------------" << endl;
-		cout << "1. È¸¿ø°¡ÀÔ" << endl;
-		cout << "2. ·Î±×ÀÎ" << endl << endl;
-		cout << "¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ";
+		cout << "------------------ ì„œìš¸ì—¬ìëŒ€í•™êµ ì¢…í•©ì •ë³´ì‹œìŠ¤í…œ ------------------" << endl;
+		cout << "1. íšŒì›ê°€ì…" << endl;
+		cout << "2. ë¡œê·¸ì¸" << endl << endl;
+		cout << "ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” >> ";
 		int input;
 		cin >> input;
 		cout << "-------------------------------------------------------------------" << endl;
@@ -91,7 +91,7 @@ int main()
 			member.setId();
 			member.setPassword();
 
-			cout << "=== È¸¿ø°¡ÀÔ ¼º°ø ==="  << endl;
+			cout << "=== íšŒì›ê°€ì… ì„±ê³µ ==="  << endl;
 		}
 		else if (input == 2)
 		{
@@ -100,7 +100,7 @@ int main()
 			break;  
 		}
 		else
-			cout << "1 ¶Ç´Â 2¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä"  << endl;
+			cout << "1 ë˜ëŠ” 2ë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”"  << endl;
 	}
 
 }
