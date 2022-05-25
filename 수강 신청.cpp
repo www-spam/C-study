@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 //주석으로 조건 나열
