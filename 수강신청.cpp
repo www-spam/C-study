@@ -13,7 +13,7 @@ string getId(string Id) //2. getId() : Id값 리턴
 {  
 	return Id;
 }
-string getPassword(string Password) //3. getPassword : Password 값 리턴
+int getPassword(string Password) //3. getPassword : Password 값 리턴
 {  
 	return Password;
 }
