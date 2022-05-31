@@ -2,89 +2,87 @@
 #include <string>
 using namespace std;
 
-//ÁÖ¼®À¸·Î Á¶°Ç ³ª¿­
+//ì£¼ì„ìœ¼ë¡œ ì¡°ê±´ ë‚˜ì—´
 
 
-string getName(string Name) // 1. getName() : Name °ª ¸®ÅÏ
+string getName(string Name) // 1. getName() : Name ê°’ ë¦¬í„´
 {  
 	return Name;
 }
-string getId(string Id) //2. getId() : Id°ª ¸®ÅÏ
+string getId(string Id) //2. getId() : Idê°’ ë¦¬í„´
 {  
 	return Id;
 }
-string getPassword(string Password) //3. getPassword : Password °ª ¸®ÅÏ
+string getPassword(string Password) //3. getPassword : Password ê°’ ë¦¬í„´
 {  
 	return Password;
 }
 
-string setName() //4-1. setName() È¸¿ø°¡ÀÔÇÒ ¶§ ÀÌ¸§ ÀÔ·Â¹Ş±â
+string setName() //4-1. setName() íšŒì›ê°€ì…í•  ë•Œ ì´ë¦„ ì…ë ¥ë°›ê¸°
 {  
 	string Name;
-	cout << "ÀÌ¸§ : ";
+	cout << "ì´ë¦„ : ";
 	cin >> Name;
 	return Name;
 }
-string setId() //4-2. setId() È¸¿ø°¡ÀÔÇÒ ¶§ ¾ÆÀÌµğ ÀÔ·Â¹Ş±â
+string setId() //4-2. setId() íšŒì›ê°€ì…í•  ë•Œ ì•„ì´ë”” ì…ë ¥ë°›ê¸°
 {  
 	string Id;
-	cout << "¾ÆÀÌµğ : ";
+	cout << "ì•„ì´ë”” : ";
 	cin >> Id;
 	return Id;
 }
-int setPassword() //4-3. setPassword() È¸¿ø°¡ÀÔÇÒ ¶§ ÀÌ¸§ ÀÔ·Â¹Ş±â
+int setPassword() //4-3. setPassword() íšŒì›ê°€ì…í•  ë•Œ ì´ë¦„ ì…ë ¥ë°›ê¸°
 {  
 	int Password;
-	cout << "ºñ¹Ğ¹øÈ£ : ";
+	cout << "ë¹„ë°€ë²ˆí˜¸ : ";
 	cin >> Password;
 	return Password;
 }
 
-class Member  //5. Å¬·¡½º Member : ·Î±×ÀÎ ±¸Çö ÄÚµå
+class Member  //5. í´ë˜ìŠ¤ Member : ë¡œê·¸ì¸ êµ¬í˜„ ì½”ë“œ
 {
 public:
 	void login(string Name, string Id, int Password)
 	{  
-		cout << "¾ÆÀÌµğ : ";
+		cout << "ì•„ì´ë”” : ";
 		string id;
 		cin >> id;
 
-		cout << "ºñ¹Ğ¹øÈ£ : ";
+		cout << "ë¹„ë°€ë²ˆí˜¸ : ";
 		int pw;
 		cin >> pw;
 
 		if (Id == id && Password == pw)
 		{
-			cout << "=== ·Î±×ÀÎ ¼º°ø ===" << endl;
-			cout << Name << "´Ô È¯¿µÇÕ´Ï´Ù" << endl;
+			cout << "=== ë¡œê·¸ì¸ ì„±ê³µ ===" << endl;
+			cout << Name << "ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤" << endl;
 		}
 		else
-			cout << "¾ÆÀÌµğ È¤Àº ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù" << endl;
+			cout << "ì•„ì´ë”” í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤" << endl;
 	}
 
 };
 
 
 
-class Cart //6. Å¬·¡½º Cart : ¸ŞÀÎ ±¸Çö ÄÚµå
+class Cart //6. í´ë˜ìŠ¤ Cart : ë©”ì¸ êµ¬í˜„ ì½”ë“œ
 {
-	int choice2; 
-
 
 public:
 
 	int array = 0;
-	string lecture[3] = { "C++ ÇÁ·Î±×·¡¹Ö", "Linux ÇÁ·Î±×·¡¹Ö", "¸®¹ö½Ì" }; 
+	string lecture[3] = { "C++ í”„ë¡œê·¸ë˜ë°", "Linux í”„ë¡œê·¸ë˜ë°", "ë¦¬ë²„ì‹±" }; 
 	string lecture_n[3] = { "0001", "0002", "0003" }; 
 	string num[3] = {}; 
 	string num2; 
 	
 
-	void bag_course() //7. bag_course() : 2¹ø °­ÀÇ ´ã±â ±â´É ÇÔ¼ö
+	void bag_course() //7. bag_course() : 2ë²ˆ ê°•ì˜ ë‹´ê¸° ê¸°ëŠ¥ í•¨ìˆ˜
 	{
 
 		
-		cout << "Ãß°¡ÇÒ ÇĞ¼ö ¹øÈ£ >>";
+		cout << "ì¶”ê°€í•  í•™ìˆ˜ ë²ˆí˜¸ >>";
 		cin >> num2;
 		cout << endl;
 
@@ -97,7 +95,7 @@ public:
 				{
 					if (num[h] == lecture[i]) 
 					{
-						cout << "ÀÌ¹Ì My Àå¹Ù±¸´Ï¿¡ ´ã°ÜÁ® ÀÖ½À´Ï´Ù." << endl;
+						cout << "ì´ë¯¸ My ì¥ë°”êµ¬ë‹ˆì— ë‹´ê²¨ì ¸ ìˆìŠµë‹ˆë‹¤." << endl;
 
 					}
 
@@ -120,9 +118,9 @@ public:
 	}
 
 
-	void put_bag() //8. put_bag() : 3¹ø ¼ö°­ ½ÅÃ» È®ÀÎ ±â´É ÇÔ¼ö
+	void put_bag() //8. put_bag() : 3ë²ˆ ìˆ˜ê°• ì‹ ì²­ í™•ì¸ ê¸°ëŠ¥ í•¨ìˆ˜
 	{
-		cout << "======== My Àå¹Ù±¸´Ï ========" << endl;
+		cout << "======== My ì¥ë°”êµ¬ë‹ˆ ========" << endl;
 		for (int j = 0; j < 3; j++)
 		{
 			cout << j + 1 << "." << num[j] << endl;
@@ -131,9 +129,9 @@ public:
 	}
 
 
-	void print() //9. print() : 1¹ø Àå¹Ù±¸´Ï ±â´É ÇÔ¼ö·Î °­ÀÇ ¸ñ·ÏÀ» ¹è¿­·Î ¹Ş¾Æ¼­ Ãâ·ÂÇÏ±â
+	void print() //9. print() : 1ë²ˆ ì¥ë°”êµ¬ë‹ˆ ê¸°ëŠ¥ í•¨ìˆ˜ë¡œ ê°•ì˜ ëª©ë¡ì„ ë°°ì—´ë¡œ ë°›ì•„ì„œ ì¶œë ¥í•˜ê¸°
 	{
-		cout << "======== °­ÀÇ¸ñ·Ï ========" << endl;
+		cout << "======== ê°•ì˜ëª©ë¡ ========" << endl;
 		for (int k = 0; k < 3; k++)
 		{
 			cout << "[" << k + 1 << "]" << lecture[k] << " >> " << "000" << k + 1 << endl;
@@ -147,16 +145,15 @@ int main()
 {
 	string Name, ID;
 	int Password;
-	int number;
 
-	string lesson[3] = { {"c++ ÇÁ·Î±×·¡¹Ö"},{"linux ÇÁ·Î±×·¡¹Ö"},{"¸®¹ö½Ì"} };
+	string lesson[3] = { {"c++ í”„ë¡œê·¸ë˜ë°"},{"linux í”„ë¡œê·¸ë˜ë°"},{"ë¦¬ë²„ì‹±"} };
 	string bag[3] = { {" "},{" "},{" "} };
 
 	while (1) {  
-		cout << "------------------ ¼­¿ï¿©ÀÚ´ëÇĞ±³ Á¾ÇÕÁ¤º¸½Ã½ºÅÛ ------------------" << endl;
-		cout << "1. È¸¿ø°¡ÀÔ" << endl;
-		cout << "2. ·Î±×ÀÎ" << endl << endl;
-		cout << "¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ";
+		cout << "------------------ ì„œìš¸ì—¬ìëŒ€í•™êµ ì¢…í•©ì •ë³´ì‹œìŠ¤í…œ ------------------" << endl;
+		cout << "1. íšŒì›ê°€ì…" << endl;
+		cout << "2. ë¡œê·¸ì¸" << endl << endl;
+		cout << "ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” >> ";
 		int input;
 		cin >> input;
 		cout << "-------------------------------------------------------------------" << endl;
@@ -167,7 +164,7 @@ int main()
 			ID = setId();
 			Password = setPassword();
 
-			cout << "=== È¸¿ø°¡ÀÔ ¼º°ø ===" << endl << endl;
+			cout << "=== íšŒì›ê°€ì… ì„±ê³µ ===" << endl << endl;
 		}
 		else if (input == 2)
 		{
@@ -176,17 +173,17 @@ int main()
 			break;  
 		}
 		else
-			cout << "1 ¶Ç´Â 2¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä" << endl << endl;
+			cout << "1 ë˜ëŠ” 2ë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”" << endl << endl;
 	}
 
 	while (1) {  
 
 		cout << "========================" << endl;
-		cout << "1. Àå¹Ù±¸´Ï" << endl;
-		cout << "2. °­ÀÇ ´ã±â" << endl;
-		cout << "3. ¼ö°­½ÅÃ»" << endl;
-		cout << "4. ·Î±×¾Æ¿ô" << endl;
-		cout << "¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
+		cout << "1. ì¥ë°”êµ¬ë‹ˆ" << endl;
+		cout << "2. ê°•ì˜ ë‹´ê¸°" << endl;
+		cout << "3. ìˆ˜ê°•ì‹ ì²­" << endl;
+		cout << "4. ë¡œê·¸ì•„ì›ƒ" << endl;
+		cout << "ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
 		int input;
 		cin >> input;
 		cout << endl;
@@ -200,7 +197,7 @@ int main()
 
 		else if (input == 3)  
 		{
-			cout << "========= My Àå¹Ù±¸´Ï =========" << endl;  
+			cout << "========= My ì¥ë°”êµ¬ë‹ˆ =========" << endl;  
 			cout << "1. " << bag[0] << endl;
 			cout << "2. " << bag[1] << endl;
 			cout << "3. " << bag[2] << endl << endl;
@@ -208,8 +205,8 @@ int main()
 
 		else if (input == 4)  
 		{
-			cout << "---------------- ·Î±×¾Æ¿ô ----------------" << endl;
-			cout << "·Î±×¾Æ¿ô µÇ¾ú½À´Ï´Ù. ¾È³çÈ÷ °¡¼¼¿ä." << endl;
+			cout << "---------------- ë¡œê·¸ì•„ì›ƒ ----------------" << endl;
+			cout << "ë¡œê·¸ì•„ì›ƒ ë˜ì—ˆìŠµë‹ˆë‹¤. ì•ˆë…•íˆ ê°€ì„¸ìš”." << endl;
 			break;
 		}
 	}
